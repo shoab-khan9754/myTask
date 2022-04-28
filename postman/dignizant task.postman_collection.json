@@ -1,0 +1,238 @@
+{
+	"info": {
+		"_postman_id": "807057d7-4362-4ebe-b02a-b158027c4f6d",
+		"name": "dignizant task",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "upload profile Pic before register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "file",
+							"type": "file",
+							"src": "/home/shoab/Desktop/download (1).jpeg"
+						}
+					]
+				},
+				"url": "localhost:4000/api/users/uploadProfilePic"
+			},
+			"response": []
+		},
+		{
+			"name": "Sign Up users",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\":\"wilojic266@idurse.com\",\n    \"name\":\"Shoab Khan\",\n    \"password\":\"Test@123\",\n    \"password2\":\"Test@123\",\n    \"mobileNumber\":919754277426,\n    \"image\":\"public/uploads/profilePictures/1651055971727_download (1).jpeg\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "localhost:4000/api/users/register"
+			},
+			"response": []
+		},
+		{
+			"name": "Confirm Email",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:4000/api/users/confirmEmail?confirmId=6269222124e1656fe8ba7bc3",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"api",
+						"users",
+						"confirmEmail"
+					],
+					"query": [
+						{
+							"key": "confirmId",
+							"value": "6269222124e1656fe8ba7bc3"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"user\":\"wilojic266@idurse.com\",\n    \"password\":\"Test@123\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "localhost:4000/api/users/login"
+			},
+			"response": []
+		},
+		{
+			"name": "Update Profile",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyNjkyMjIxMjRlMTY1NmZlOGJhN2JjMyIsImVtYWlsIjoid2lsb2ppYzI2NkBpZHVyc2UuY29tIiwibmFtZSI6IlNob2FiIEtoYW4iLCJwcm9maWxlSW1hZ2UiOiJwdWJsaWMvdXBsb2Fkcy9wcm9maWxlUGljdHVyZXMvMTY1MTA1NTk3MTcyN19kb3dubG9hZCAoMSkuanBlZyIsIm1vYmlsZU51bWJlciI6OTE5NzU0Mjc3NDI2LCJpYXQiOjE2NTEwNjc1ODAsImV4cCI6MTY4MjYyNDUwNn0.SWHdJOzz4o5k8BAeme7rGkF37j4SiCfSfthvHoITZ04"
+					}
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\":\"Shoab Raza Khan\",\n    \"mobileNumber\":\"917745939145\",\n    \"image\":\"public/uploads/profilePictures/1651069408427_1_G48L33n3M7FXze_kturcyQ.jpeg\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "localhost:4000/api/users/updateProfile"
+			},
+			"response": []
+		},
+		{
+			"name": "Add Product",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyNjkyMjIxMjRlMTY1NmZlOGJhN2JjMyIsImVtYWlsIjoid2lsb2ppYzI2NkBpZHVyc2UuY29tIiwibmFtZSI6IlNob2FiIEtoYW4iLCJwcm9maWxlSW1hZ2UiOiJwdWJsaWMvdXBsb2Fkcy9wcm9maWxlUGljdHVyZXMvMTY1MTA1NTk3MTcyN19kb3dubG9hZCAoMSkuanBlZyIsIm1vYmlsZU51bWJlciI6OTE5NzU0Mjc3NDI2LCJpYXQiOjE2NTEwNjc1ODAsImV4cCI6MTY4MjYyNDUwNn0.SWHdJOzz4o5k8BAeme7rGkF37j4SiCfSfthvHoITZ04"
+					}
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"title\": \"boAt Stone 1000 14 W Portable Bluetooth Speaker  (Black, Stereo Channel)\",\n    \"description\": \"Give a new dimension to partying at home when you play your favorite tracks on the boAt Stone 1000 Bluetooth speaker. The crystal-clear audio output of this speaker makes it a must-have for every person who loves to party.\",\n    \"price\": 6990,\n    \"discount_price\": 4791,\n    \"stock\": 5\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "localhost:4000/api/products/addProduct"
+			},
+			"response": []
+		},
+		{
+			"name": "Upload product Attachments",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "productId",
+							"value": "626a0e3693940fc86167fec7",
+							"type": "default"
+						},
+						{
+							"key": "file",
+							"type": "file",
+							"src": "/home/shoab/Desktop/d.webp"
+						}
+					]
+				},
+				"url": "localhost:4000/api/products/uploadProductImages"
+			},
+			"response": []
+		},
+		{
+			"name": "update Product",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyNjkyMjIxMjRlMTY1NmZlOGJhN2JjMyIsImVtYWlsIjoid2lsb2ppYzI2NkBpZHVyc2UuY29tIiwibmFtZSI6IlNob2FiIEtoYW4iLCJwcm9maWxlSW1hZ2UiOiJwdWJsaWMvdXBsb2Fkcy9wcm9maWxlUGljdHVyZXMvMTY1MTA1NTk3MTcyN19kb3dubG9hZCAoMSkuanBlZyIsIm1vYmlsZU51bWJlciI6OTE5NzU0Mjc3NDI2LCJpYXQiOjE2NTEwNjc1ODAsImV4cCI6MTY4MjYyNDUwNn0.SWHdJOzz4o5k8BAeme7rGkF37j4SiCfSfthvHoITZ04"
+					}
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"attachments\": [\n    \"public/uploads/626a0e3693940fc86167fec7/1651117852214_d.webp\"\n],\n    \"productId\": \"626a0e3693940fc86167fec7\",\n    \"title\": \"boAt Stone 1000 14 W Portable Bluetooth Speaker  (Black, Stereo Channel)\",\n    \"description\": \"Give a new dimension to partying at home when you play your favorite tracks on the boAt Stone 1000 Bluetooth speaker. The crystal-clear audio output of this speaker makes it a must-have for every person who loves to party.\",\n    \"price\": 2199,\n    \"discount_price\": 0,\n    \"stock\": 5\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "localhost:4000/api/products/updateProduct"
+			},
+			"response": []
+		},
+		{
+			"name": "Sell Product",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"productId\": \"626a0d6093940fc86167fec4\",\n      \"quantity\": 1,\n      \"price\": 5999,\n      \"discount_price\": 2000 ,\n      \"totalPrice\": 3999\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "localhost:4000/api/sellProduct/addSellProduct"
+			},
+			"response": []
+		},
+		{
+			"name": "Get Product",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:4000/api/products/getProduct?page=1&title=a&price=2199",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"api",
+						"products",
+						"getProduct"
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "1"
+						},
+						{
+							"key": "title",
+							"value": "a"
+						},
+						{
+							"key": "price",
+							"value": "2199"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
